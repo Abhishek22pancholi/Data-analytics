@@ -34,19 +34,19 @@ Y= dataset['Insulin'].value.reshape(-1,1)
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
 
-# regressor = LinearRegression()
-# regressor.fit(X_train, Y_train)
-#
-# print('intercept: ', regressor.intercept_)
-# print('coefficent: ', regressor.coef_)
-#
-# y_pred = regressor.predict(X_test)
-#
-# df= pd.DataFrame({'Actual': Y_test.flatten(), 'Predict': y_pred.flatten})
-# print(df)
-#
-#
+regressor = LinearRegression()
+regressor.fit(X_train, Y_train)
 
+print('intercept: ', regressor.intercept_)
+print('coefficent: ', regressor.coef_)
+
+y_pred = regressor.predict(X_test)
+
+df= pd.DataFrame({'Actual': Y_test.flatten(), 'Predict': y_pred.flatten})
+print(df)
+
+
+#In Progress
 
 
 
